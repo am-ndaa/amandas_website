@@ -13,10 +13,15 @@ import { motion } from "framer-motion"
 import { ReactNode } from "react"
 
 export default function SectionWrapper({
-  children,}: { children: ReactNode }) 
+  id, children,
+}: { 
+    id: string
+    children: ReactNode 
+}) 
   {
   return (
     <motion.section
+      id = {id}
       style={{ height: "100vh" }} // forces each section to be the whole screen height so that scrolling feels like pages
       initial={{ opacity: 0 }} // initially the secion is invisible until it enters viewport
       whileInView={{ opacity: 1 }} // this causes it to fade in when the section is in view.
