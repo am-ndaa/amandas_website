@@ -22,7 +22,10 @@ export default function SectionWrapper({
   return (
     <motion.section
       id = {id}
-      style={{ height: "100vh" }} // forces each section to take up 100vh, entire screen, potentially FIXME back to auto
+      style={{ height: "100vh", 
+               position: "relative",
+               overflow: "hidden",
+      }} // forces each section to take up 100vh, entire screen, potentially FIXME back to auto
       initial={{ opacity: 0 }} // initially the secion is invisible until it enters viewport
       whileInView={{ opacity: 1 }} // this causes it to fade in when the section is in view.
       // framer motion detects the section and opacity animates from 0 to 1
